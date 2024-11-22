@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md">
+    <header>
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-800">Bard Blog</div>
+        <div className="text-2xl font-bold text-gray-800">BardBlog</div>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex space-x-6">
@@ -16,7 +16,10 @@ const Header = () => {
             Blog
           </a>
           <a href="#" className="text-gray-600 hover:text-gray-900">
-            About
+            Single Post
+          </a>
+          <a href="#" className="text-gray-600 hover:text-gray-900">
+            Pages
           </a>
           <a href="#" className="text-gray-600 hover:text-gray-900">
             Contact
