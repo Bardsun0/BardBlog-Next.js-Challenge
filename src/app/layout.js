@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Blog Sayfam",
+  title: "Bard Blog",
   description: "Kişisel blog sayfam",
 };
 
