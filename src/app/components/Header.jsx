@@ -58,21 +58,8 @@ const Header = () => {
           </div>
 
           {/* Theme Button */}
-          <button className="p-2 rounded-full bg-gray-200 hover:bg-gray-500 transition">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3v2m0 14v2m9-9h-2M3 12H1m16.95 6.95l-1.41-1.41M6.46 6.46L5.05 5.05m12.02 12.02l1.41 1.41M6.46 17.54l1.41-1.41M12 8a4 4 0 100 8 4 4 0 000-8z"
-              />
-            </svg>
+          <button className="relative w-12 h-6 bg-gray-200 rounded-full flex items-center transition-all duration-300 hover:bg-gray-300">
+            <span className="absolute left-1 w-4 h-4 bg-white rounded-full shadow transform transition-transform duration-300"></span>
           </button>
         </div>
       </div>
