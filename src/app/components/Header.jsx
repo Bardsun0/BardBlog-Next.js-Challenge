@@ -6,40 +6,40 @@ const Header = () => {
     <header className="bg-white shadow font-mono">
       <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4">
         {/* Logo */}
-        <div className="text-2xl font-normal text-gray-800 flex justify-between space-y-4">
+        <div className="text-2xl font-normal text-black flex justify-between space-y-4">
           <Image src="/logo.png" width={32} height={32} alt="Bard Blog Logo" />
           Bard<span className="font-bold">Blog</span>
         </div>
 
         {/* Navbar */}
         <nav className="hidden md:flex space-x-12">
-          <a href="#" className="text-gray-600 hover:text-gray-900">
+          <a href="#" className="text-gray-500 hover:text-black">
             Home
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
+          <a href="#" className="text-gray-500 hover:text-black">
             Blog
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
+          <a href="#" className="text-gray-500 hover:text-black">
             Single Post
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
+          <a href="#" className="text-gray-500 hover:text-black">
             Pages
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
+          <a href="#" className="text-gray-500 hover:text-black">
             Contact
           </a>
         </nav>
 
-        {/* Search Input and Dark Mode */}
+        {/* Search Input and Theme Button */}
         <div className="flex items-center space-x-4">
           {/* Search Input */}
           <div className="relative">
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-100 text-gray-600 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="bg-gray-100 text-gray-500 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
             />
-            <button className="absolute right-2 top-2 text-gray-600">
+            <button className="absolute right-2 top-2 text-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -57,8 +57,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Dark Mode Button */}
-          <button className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition">
+          {/* Theme Button */}
+          <button className="p-2 rounded-full bg-gray-200 hover:bg-gray-500 transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
