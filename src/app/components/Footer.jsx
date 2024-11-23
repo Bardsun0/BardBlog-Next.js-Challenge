@@ -18,7 +18,7 @@ const Footer = () => {
             <p>
               <span className="font-semibold">Email: </span>
               <a href="mailto:info@template.net" className="text-gray-500">
-                info@template.net
+                ozangunes2894@gmail.com
               </a>
             </p>
             <p>
@@ -125,7 +125,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-200">
+      <div className="border-t border-gray-300">
         <div className="max-w-screen-xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <div className="text-2xl font-normal text-black flex justify-between space-y-4">
