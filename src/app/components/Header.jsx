@@ -12,20 +12,20 @@ const Header = () => {
         </div>
 
         {/* Navbar */}
-        <nav className="hidden md:flex space-x-12">
-          <a href="#" className="text-gray-500 hover:text-black">
+        <nav className="hidden md:flex space-x-12 text-gray-500">
+          <a href="#" className="hover:text-black">
             Home
           </a>
-          <a href="#" className="text-gray-500 hover:text-black">
+          <a href="#" className="hover:text-black">
             Blog
           </a>
-          <a href="#" className="text-gray-500 hover:text-black">
+          <a href="#" className="hover:text-black">
             Single Post
           </a>
-          <a href="#" className="text-gray-500 hover:text-black">
+          <a href="#" className="hover:text-black">
             Pages
           </a>
-          <a href="#" className="text-gray-500 hover:text-black">
+          <a href="#" className="hover:text-black">
             Contact
           </a>
         </nav>

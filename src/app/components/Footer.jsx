@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -102,9 +103,9 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div className="bg-white p-6 rounded-md shadow">
-          <h3 className="font-bold text-xl mb-4">Weekly Newsletter</h3>
-          <p className="text-gray-500 text-sm mb-4">
+        <div className="bg-white p-6 rounded-md shadow w-96">
+          <h3 className="font-bold text-xl mb-2 ml-14">Weekly Newsletter</h3>
+          <p className="text-gray-500 text-sm mb-8">
             Get blog articles and offers via email
           </p>
           <form className="space-y-3">
@@ -127,11 +128,15 @@ const Footer = () => {
       <div className="border-t border-gray-200">
         <div className="max-w-screen-xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <span className="text-2xl font-normal">Meta</span>
-            <span className="text-2xl font-bold">Blog</span>
-            <span className="text-sm text-gray-500">
-              © JS Template 2023. All Rights Reserved.
-            </span>
+            <div className="text-2xl font-normal text-black flex justify-between space-y-4">
+              <Image
+                src="/logo.png"
+                width={32}
+                height={32}
+                alt="Bard Blog Logo"
+              />
+              Bard<span className="font-bold">Blog</span>
+            </div>
           </div>
           <div className="flex space-x-6 text-sm text-gray-500">
             <a href="#" className="hover:text-black">
