@@ -102,12 +102,12 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto">
+        <div className="bg-white p-6 rounded-md shadow">
           <h3 className="font-bold text-xl mb-4">Weekly Newsletter</h3>
           <p className="text-gray-500 text-sm mb-4">
             Get blog articles and offers via email
           </p>
-          <form className="space-y-4">
+          <form className="space-y-3">
             <input
               type="email"
               placeholder="Your Email"
