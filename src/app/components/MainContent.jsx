@@ -17,7 +17,7 @@ const MainContent = () => {
   return (
     <main className="flex-grow">
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] mb-16">
+      <section className="relative max-w-screen-xl mx-auto w-full h-[600px] mb-16">
         <div className="relative w-full h-full">
           {/* Hero Background Image */}
           <Image
