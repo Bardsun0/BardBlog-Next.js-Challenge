@@ -1,7 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 const Footer = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Form işlemleri burada yapılacak
+  };
+
   return (
     <footer className="bg-gray-100 font-mono mt-auto">
       {/* Main Footer Content */}
@@ -31,38 +38,40 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="space-y-4 px-20">
           <h3 className="font-bold text-xl mb-4">Quick Link</h3>
-          <ul className="space-y-2 text-sm text-gray-500">
-            <li>
-              <a href="#" className="hover:text-black">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-black">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-black">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-black">
-                Archived
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-black">
-                Author
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-black">
-                Contact
-              </a>
-            </li>
-          </ul>
+          <nav aria-labelledby="quick-links">
+            <ul className="space-y-2 text-sm text-gray-500">
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  Archived
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  Author
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-black transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         {/* Category */}
@@ -70,57 +79,47 @@ const Footer = () => {
           <h3 className="font-bold text-xl mb-4">Category</h3>
           <ul className="space-y-2 text-sm text-gray-500">
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Lifestyle
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Technology
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Travel
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Business
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Economy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-black">
+              <Link href="/" className="hover:text-black transition-colors">
                 Sports
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Newsletter */}
-        <div className="bg-white p-6 rounded-md shadow w-96">
-          <h3 className="font-bold text-xl mb-2 ml-14">Weekly Newsletter</h3>
+        <div className="bg-white p-6 rounded-md shadow w-full lg:w-96">
+          <h3 className="font-bold text-xl mb-2 ml-14" id="newsletter">
+            Weekly Newsletter
+          </h3>
           <p className="text-gray-500 text-sm mb-8">
             Get blog articles and offers via email
           </p>
-          <form className="space-y-3">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full px-4 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300"
-            />
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-            >
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </div>
 
@@ -139,15 +138,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex space-x-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-black">
+            <Link href="/" className="hover:text-black transition-colors">
               Terms of Use
-            </a>
-            <a href="#" className="hover:text-black">
+            </Link>
+            <Link href="/" className="hover:text-black transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-black">
+            </Link>
+            <Link href="/" className="hover:text-black transition-colors">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
