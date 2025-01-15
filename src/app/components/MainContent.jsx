@@ -1,8 +1,56 @@
 import React from "react";
 import Image from "next/image";
 
+// Alt bileşenler
+const CategoryBadge = ({ children }) => (
+  <span className="inline-block bg-blue-600 text-white text-sm px-4 py-1 rounded-full">
+    {children}
+  </span>
+);
+
+const AuthorInfo = ({ image, author, date }) => (
+  <div className="flex items-center space-x-2">
+    <div className="w-10 h-10 rounded-full overflow-hidden relative">
+      <Image src={image} alt={author} fill className="object-cover" />
+    </div>
+    <span className="font-medium">{author}</span>
+    <span className="text-gray-300">•</span>
+    <span>{date}</span>
+  </div>
+);
+
+const Advertisement = () => (
+  <div className="w-full h-[100px] bg-gray-200 flex items-center justify-center">
+    <span className="text-gray-500">Advertisement</span>
+  </div>
+);
+
+const BlogPost = ({ post }) => (
+  <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+    <div className="relative h-[240px]">
+      <Image src={post.image} alt={post.title} fill className="object-cover" />
+    </div>
+    <div className="p-6">
+      <span className="text-blue-600 text-sm">{post.category}</span>
+      <h3 className="text-xl font-bold mt-2 mb-4 line-clamp-2">{post.title}</h3>
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 rounded-full overflow-hidden relative">
+          <Image
+            src={post.authorImage}
+            alt={post.author}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <span className="text-sm font-medium">{post.author}</span>
+        <span className="text-gray-400">•</span>
+        <span className="text-sm text-gray-500">{post.date}</span>
+      </div>
+    </div>
+  </article>
+);
+
 const MainContent = () => {
-  // Örnek blog postları verisi
   const posts = Array.from({ length: 9 }).map((_, index) => ({
     id: index + 1,
     title:
@@ -10,8 +58,8 @@ const MainContent = () => {
     category: "Technology",
     author: "Jason Francisco",
     date: "August 20, 2023",
-    image: `/blog-${(index % 3) + 1}.png`, // 3 farklı görsel arasında dönecek
-    authorImage: `/avatar-${(index % 2) + 1}.png`, // 2 farklı avatar arasında dönecek
+    image: `/blog-${(index % 3) + 1}.png`,
+    authorImage: `/avatar-${(index % 2) + 1}.png`,
   }));
 
   return (
@@ -19,7 +67,6 @@ const MainContent = () => {
       {/* Hero Section */}
       <section className="relative max-w-screen-xl mx-auto w-full h-[600px] mb-16">
         <div className="relative w-full h-full">
-          {/* Hero Background Image */}
           <Image
             src="/hero.png"
             alt="Hero background"
@@ -27,33 +74,20 @@ const MainContent = () => {
             className="object-cover"
             priority
           />
-
-          {/* Overlay */}
           <div className="absolute inset-0 bg-black/40" />
 
-          {/* Hero Content */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="max-w-screen-xl mx-auto px-4 text-center text-white">
-              <span className="inline-block bg-blue-600 text-white text-sm px-4 py-1 rounded-full mb-4">
-                Technology
-              </span>
+              <CategoryBadge>Technology</CategoryBadge>
               <h1 className="text-4xl md:text-5xl font-bold mb-4 max-w-3xl mx-auto">
                 The Impact of Technology on the Workplace: How Technology is
                 Changing
               </h1>
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-10 h-10 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/avatar-1.png"
-                    alt="Author"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <span className="font-medium">Jason Francisco</span>
-                <span className="text-gray-300">•</span>
-                <span>August 20, 2023</span>
-              </div>
+              <AuthorInfo
+                image="/avatar-1.png"
+                author="Jason Francisco"
+                date="August 20, 2023"
+              />
             </div>
           </div>
         </div>
@@ -61,9 +95,7 @@ const MainContent = () => {
 
       {/* Advertisement Section */}
       <section className="max-w-screen-xl mx-auto px-4 mb-16">
-        <div className="w-full h-[100px] bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">Advertisement</span>
-        </div>
+        <Advertisement />
       </section>
 
       {/* Latest Posts Section */}
@@ -71,38 +103,7 @@ const MainContent = () => {
         <h2 className="text-2xl font-bold mb-8">Latest Post</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="relative h-[240px]">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="text-blue-600 text-sm">{post.category}</span>
-                <h3 className="text-xl font-bold mt-2 mb-4 line-clamp-2">
-                  {post.title}
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full overflow-hidden relative">
-                    <Image
-                      src={post.authorImage}
-                      alt={post.author}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <span className="text-sm font-medium">{post.author}</span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-sm text-gray-500">{post.date}</span>
-                </div>
-              </div>
-            </article>
+            <BlogPost key={post.id} post={post} />
           ))}
         </div>
         <div className="text-center mt-12">
@@ -114,9 +115,7 @@ const MainContent = () => {
 
       {/* Bottom Advertisement Section */}
       <section className="max-w-screen-xl mx-auto px-4 mb-16">
-        <div className="w-full h-[100px] bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">Advertisement</span>
-        </div>
+        <Advertisement />
       </section>
     </main>
   );
