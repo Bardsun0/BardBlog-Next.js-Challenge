@@ -3,14 +3,47 @@ import Image from "next/image";
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
 
+const FooterLink = ({ href = "/", children }) => (
+  <Link href={href} className="hover:text-black transition-colors">
+    {children}
+  </Link>
+);
+
+const FooterSection = ({ title, children }) => (
+  <div className="space-y-4">
+    <h3 className="font-bold text-xl mb-4">{title}</h3>
+    {children}
+  </div>
+);
+
+const FooterLinkList = ({ items }) => (
+  <ul className="space-y-2 text-sm text-gray-500">
+    {items.map((item) => (
+      <li key={item}>
+        <FooterLink>{item}</FooterLink>
+      </li>
+    ))}
+  </ul>
+);
+
 const Footer = () => {
+  const quickLinks = ["Home", "About", "Blog", "Archived", "Author", "Contact"];
+  const categories = [
+    "Lifestyle",
+    "Technology",
+    "Travel",
+    "Business",
+    "Economy",
+    "Sports",
+  ];
+  const policies = ["Terms of Use", "Privacy Policy", "Cookie Policy"];
+
   return (
     <footer className="bg-gray-100 font-mono mt-auto">
       {/* Main Footer Content */}
       <div className="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
         {/* About Section */}
-        <div className="space-y-4">
-          <h3 className="font-bold text-xl mb-4">About</h3>
+        <FooterSection title="About">
           <p className="text-gray-500 text-sm leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -19,7 +52,10 @@ const Footer = () => {
           <div className="space-y-2 text-sm">
             <p>
               <span className="font-semibold">Email: </span>
-              <a href="mailto:info@template.net" className="text-gray-500">
+              <a
+                href="mailto:ozangunes2894@gmail.com"
+                className="text-gray-500"
+              >
                 ozangunes2894@gmail.com
               </a>
             </p>
@@ -28,42 +64,21 @@ const Footer = () => {
               <span className="text-gray-500">+880 123 456 789</span>
             </p>
           </div>
-        </div>
+        </FooterSection>
 
         {/* Quick Links */}
         <div className="space-y-4 px-20">
-          <h3 className="font-bold text-xl mb-4">Quick Link</h3>
-          <nav aria-labelledby="quick-links">
-            <ul className="space-y-2 text-sm text-gray-500">
-              {["Home", "About", "Blog", "Archived", "Author", "Contact"].map(
-                (link) => (
-                  <li key={link}>
-                    <Link
-                      href="/"
-                      className="hover:text-black transition-colors"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </nav>
+          <FooterSection title="Quick Link">
+            <nav aria-labelledby="quick-links">
+              <FooterLinkList items={quickLinks} />
+            </nav>
+          </FooterSection>
         </div>
 
         {/* Category */}
-        <div className="space-y-4">
-          <h3 className="font-bold text-xl mb-4">Category</h3>
-          <ul className="space-y-2 text-sm text-gray-500">
-            {["Lifestyle", "Technology", "Travel", "Business", "Economy", "Sports"].map((category) => (
-              <li key={category}>
-                <Link href="/" className="hover:text-black transition-colors">
-                  {category}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <FooterSection title="Category">
+          <FooterLinkList items={categories} />
+        </FooterSection>
 
         {/* Newsletter */}
         <div className="bg-white p-6 rounded-md shadow w-full lg:w-96">
@@ -81,7 +96,7 @@ const Footer = () => {
       <div className="border-t border-gray-300">
         <div className="max-w-screen-xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="text-2xl font-normal text-black flex justify-between space-y-4">
+            <div className="text-2xl font-normal text-black flex items-center gap-2">
               <Image
                 src="/logo.png"
                 width={32}
@@ -92,14 +107,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex space-x-6 text-sm text-gray-500">
-            {["Terms of Use", "Privacy Policy", "Cookie Policy"].map((policy) => (
-              <Link 
-                key={policy}
-                href="/" 
-                className="hover:text-black transition-colors"
-              >
-                {policy}
-              </Link>
+            {policies.map((policy) => (
+              <FooterLink key={policy}>{policy}</FooterLink>
             ))}
           </div>
         </div>
