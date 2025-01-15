@@ -27,13 +27,13 @@ const AuthorInfo = ({ image, author, date }) => (
 );
 
 const Advertisement = () => (
-  <div className="w-full h-[100px] bg-gray-200 flex items-center justify-center">
-    <span className="text-gray-500">Advertisement</span>
+  <div className="w-full h-[100px] bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+    <span className="text-gray-500 dark:text-gray-400">Advertisement</span>
   </div>
 );
 
 const BlogPost = ({ post }) => (
-  <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+  <article className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
     <div className="relative h-[240px]">
       <Image
         src={post.image}
@@ -45,7 +45,9 @@ const BlogPost = ({ post }) => (
     </div>
     <div className="p-6">
       <span className="text-blue-600 text-sm">{post.category}</span>
-      <h3 className="text-xl font-bold mt-2 mb-4 line-clamp-2">{post.title}</h3>
+      <h3 className="text-xl font-bold mt-2 mb-4 line-clamp-2 text-black dark:text-white">
+        {post.title}
+      </h3>
       <div className="flex items-center space-x-2">
         <div className="w-8 h-8 rounded-full overflow-hidden relative">
           <Image

@@ -56,11 +56,11 @@ const NewsletterForm = () => {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-blue-500 text-white px-4 py-2 rounded-md 
-                 hover:bg-blue-700 dark:hover:bg-blue-400
-                 transition-all 
-                 flex items-center justify-center
-                 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-blue-600 text-white px-4 py-2 rounded-md 
+           hover:bg-blue-700 dark:hover:bg-blue-500
+           transition-all 
+           flex items-center justify-center
+           disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? "Subscribing..." : "Subscribe"}
       </button>

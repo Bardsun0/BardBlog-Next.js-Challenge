@@ -24,7 +24,7 @@ const SearchIcon = () => (
 const NavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="hover:text-black dark:hover:text-white transition-colors"
+    className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
   >
     {children}
   </Link>
