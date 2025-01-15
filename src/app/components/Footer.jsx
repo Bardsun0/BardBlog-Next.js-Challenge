@@ -4,11 +4,6 @@ import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
 
 const Footer = () => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Form işlemleri burada yapılacak
-  };
-
   return (
     <footer className="bg-gray-100 font-mono mt-auto">
       {/* Main Footer Content */}
@@ -40,36 +35,18 @@ const Footer = () => {
           <h3 className="font-bold text-xl mb-4">Quick Link</h3>
           <nav aria-labelledby="quick-links">
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  Archived
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  Author
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-black transition-colors">
-                  Contact
-                </Link>
-              </li>
+              {["Home", "About", "Blog", "Archived", "Author", "Contact"].map(
+                (link) => (
+                  <li key={link}>
+                    <Link
+                      href="/"
+                      className="hover:text-black transition-colors"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
         </div>
@@ -78,36 +55,13 @@ const Footer = () => {
         <div className="space-y-4">
           <h3 className="font-bold text-xl mb-4">Category</h3>
           <ul className="space-y-2 text-sm text-gray-500">
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Lifestyle
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Technology
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Travel
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Business
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Economy
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">
-                Sports
-              </Link>
-            </li>
+            {["Lifestyle", "Technology", "Travel", "Business", "Economy", "Sports"].map((category) => (
+              <li key={category}>
+                <Link href="/" className="hover:text-black transition-colors">
+                  {category}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -138,15 +92,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex space-x-6 text-sm text-gray-500">
-            <Link href="/" className="hover:text-black transition-colors">
-              Terms of Use
-            </Link>
-            <Link href="/" className="hover:text-black transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/" className="hover:text-black transition-colors">
-              Cookie Policy
-            </Link>
+            {["Terms of Use", "Privacy Policy", "Cookie Policy"].map((policy) => (
+              <Link 
+                key={policy}
+                href="/" 
+                className="hover:text-black transition-colors"
+              >
+                {policy}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
