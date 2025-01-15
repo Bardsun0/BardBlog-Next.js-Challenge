@@ -1,12 +1,12 @@
 import localFont from "next/font/local";
+import { ThemeProvider } from "./components/ThemeProvider";
 import "./globals.css";
 
-// Font tanımlamaları
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
-  display: "swap", // Font yüklenene kadar sistem fontunu kullan
+  display: "swap",
 });
 
 const geistMono = localFont({
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

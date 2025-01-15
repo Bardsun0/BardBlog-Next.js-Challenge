@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "./ThemeProvider";
 
 const SearchIcon = () => (
   <svg
@@ -20,25 +22,43 @@ const SearchIcon = () => (
 );
 
 const NavLink = ({ href, children }) => (
-  <Link href={href} className="hover:text-black transition-colors">
+  <Link
+    href={href}
+    className="hover:text-black dark:hover:text-white transition-colors"
+  >
     {children}
   </Link>
 );
 
+const ThemeToggle = ({ theme, toggleTheme }) => (
+  <button
+    onClick={toggleTheme}
+    className="relative w-12 h-6 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center 
+             transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+    aria-label="Toggle theme"
+  >
+    <span
+      className={`absolute w-4 h-4 bg-white rounded-full shadow transform transition-transform duration-300
+                ${theme === "dark" ? "translate-x-7" : "translate-x-1"}`}
+    />
+  </button>
+);
+
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
   const navItems = ["Home", "Blog", "Single Post", "Pages", "Contact"];
 
   return (
-    <header className="bg-white font-mono">
-      <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4">
+    <header className="bg-white dark:bg-gray-900 font-mono">
+      <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4 px-4">
         {/* Logo */}
-        <div className="text-2xl font-normal text-black flex items-center gap-2">
+        <div className="text-2xl font-normal text-black dark:text-white flex items-center gap-2">
           <Image src="/logo.png" width={32} height={32} alt="Bard Blog Logo" />
           Bard<span className="font-bold">Blog</span>
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex space-x-12 text-gray-500">
+        <nav className="hidden md:flex space-x-12 text-gray-500 dark:text-gray-400">
           {navItems.map((item) => (
             <NavLink key={item} href="/">
               {item}
@@ -53,27 +73,20 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-100 text-gray-500 border border-gray-300 rounded px-4 py-2 text-sm 
-                       focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 
+                       border border-gray-300 dark:border-gray-700 rounded px-4 py-2 text-sm 
+                       focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
             />
             <button
               type="submit"
-              className="absolute right-2 top-2 text-gray-500"
+              className="absolute right-2 top-2 text-gray-500 dark:text-gray-400"
             >
               <SearchIcon />
             </button>
           </div>
 
           {/* Theme Toggle */}
-          <button
-            className="relative w-12 h-6 bg-gray-200 rounded-full flex items-center 
-                         transition-all duration-300 hover:bg-gray-300"
-          >
-            <span
-              className="absolute left-1 w-4 h-4 bg-white rounded-full shadow 
-                         transform transition-transform duration-300"
-            />
-          </button>
+          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </div>
       </div>
     </header>

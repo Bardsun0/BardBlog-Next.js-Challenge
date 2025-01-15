@@ -63,7 +63,7 @@ const MainContent = () => {
   }));
 
   return (
-    <main className="flex-grow">
+    <main className="flex-grow bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <section className="relative max-w-screen-xl mx-auto w-full h-[600px] mb-16">
         <div className="relative w-full h-full">
@@ -100,14 +100,19 @@ const MainContent = () => {
 
       {/* Latest Posts Section */}
       <section className="max-w-screen-xl mx-auto px-4 mb-16">
-        <h2 className="text-2xl font-bold mb-8">Latest Post</h2>
+        <h2 className="text-2xl font-bold mb-8 text-black dark:text-white">
+          Latest Post
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <BlogPost key={post.id} post={post} />
           ))}
         </div>
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+          <button
+            className="bg-blue-600 text-white px-8 py-3 rounded-full 
+                           hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors"
+          >
             View All Post
           </button>
         </div>

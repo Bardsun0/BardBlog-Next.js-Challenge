@@ -42,8 +42,13 @@ const NewsletterForm = () => {
         placeholder="Your Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full px-4 py-2 text-sm border border-gray-300 rounded-md 
-                 focus:outline-none focus:ring-2 focus:ring-gray-300 
+        className="w-full px-4 py-2 text-sm 
+                 border border-gray-300 dark:border-gray-700 
+                 bg-white dark:bg-gray-800
+                 text-gray-900 dark:text-gray-100
+                 rounded-md 
+                 focus:outline-none focus:ring-2 
+                 focus:ring-gray-300 dark:focus:ring-gray-600 
                  transition-all disabled:opacity-50"
         disabled={isLoading}
       />
@@ -52,7 +57,8 @@ const NewsletterForm = () => {
         type="submit"
         disabled={isLoading}
         className="w-full bg-blue-500 text-white px-4 py-2 rounded-md 
-                 hover:bg-blue-700 transition-all 
+                 hover:bg-blue-700 dark:hover:bg-blue-400
+                 transition-all 
                  flex items-center justify-center
                  disabled:opacity-50 disabled:cursor-not-allowed"
       >
@@ -62,7 +68,9 @@ const NewsletterForm = () => {
       {status.message && (
         <p
           className={`text-sm ${
-            status.type === "success" ? "text-green-600" : "text-red-600"
+            status.type === "success"
+              ? "text-green-600 dark:text-green-400"
+              : "text-red-600 dark:text-red-400"
           }`}
         >
           {status.message}
