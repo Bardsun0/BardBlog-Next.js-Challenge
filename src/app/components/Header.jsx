@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -13,33 +14,36 @@ const Header = () => {
 
         {/* Navbar */}
         <nav className="hidden md:flex space-x-12 text-gray-500">
-          <a href="#" className="hover:text-black">
+          <Link href="/" className="hover:text-black transition-colors">
             Home
-          </a>
-          <a href="#" className="hover:text-black">
+          </Link>
+          <Link href="/" className="hover:text-black transition-colors">
             Blog
-          </a>
-          <a href="#" className="hover:text-black">
+          </Link>
+          <Link href="/" className="hover:text-black transition-colors">
             Single Post
-          </a>
-          <a href="#" className="hover:text-black">
+          </Link>
+          <Link href="/" className="hover:text-black transition-colors">
             Pages
-          </a>
-          <a href="#" className="hover:text-black">
+          </Link>
+          <Link href="/" className="hover:text-black transition-colors">
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Search Input and Theme Button */}
         <div className="flex items-center space-x-4">
           {/* Search Input */}
-          <div className="relative">
+          <form className="relative" onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
               placeholder="Search"
               className="bg-gray-100 text-gray-500 border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
             />
-            <button className="absolute right-2 top-2 text-gray-500">
+            <button
+              type="submit"
+              className="absolute right-2 top-2 text-gray-500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -55,7 +59,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-          </div>
+          </form>
 
           {/* Theme Button */}
           <button className="relative w-12 h-6 bg-gray-200 rounded-full flex items-center transition-all duration-300 hover:bg-gray-300">
