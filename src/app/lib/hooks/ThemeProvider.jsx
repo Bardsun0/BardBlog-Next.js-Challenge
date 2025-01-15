@@ -6,7 +6,6 @@ const ThemeContext = createContext({
   toggleTheme: () => null,
 });
 
-// useTheme hook'unu export edelim
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {

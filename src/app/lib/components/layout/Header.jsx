@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "../../hooks/ThemeProvider";
+import { NAV_ITEMS } from "@/app/constants/navigation";
 
 const SearchIcon = () => (
   <svg
@@ -46,7 +47,6 @@ const ThemeToggle = ({ theme, toggleTheme }) => (
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
-  const navItems = ["Home", "Blog", "Single Post", "Pages", "Contact"];
 
   return (
     <header className="bg-white dark:bg-gray-900 font-mono">
@@ -59,7 +59,7 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className="hidden md:flex space-x-12 text-gray-500 dark:text-gray-400">
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <NavLink key={item} href="/">
               {item}
             </NavLink>

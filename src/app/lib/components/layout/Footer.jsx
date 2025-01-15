@@ -2,7 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NewsletterForm from "./NewsletterForm";
+import NewsletterForm from "../features/NewsletterForm";
+import { FOOTER_LINKS, CONTACT_INFO } from "@/app/constants/navigation";
 
 const FooterLink = ({ href = "/", children }) => (
   <Link href={href} className="hover:text-black transition-colors">
@@ -28,16 +29,8 @@ const FooterLinkList = ({ items }) => (
 );
 
 const Footer = () => {
-  const quickLinks = ["Home", "About", "Blog", "Archived", "Author", "Contact"];
-  const categories = [
-    "Lifestyle",
-    "Technology",
-    "Travel",
-    "Business",
-    "Economy",
-    "Sports",
-  ];
-  const policies = ["Terms of Use", "Privacy Policy", "Cookie Policy"];
+  const { quickLinks, categories, policies } = FOOTER_LINKS;
+  const { email, phone } = CONTACT_INFO;
 
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 font-mono mt-auto">
@@ -53,10 +46,10 @@ const Footer = () => {
                 Email:{" "}
               </span>
               <a
-                href="mailto:ozangunes2894@gmail.com"
+                href={`mailto:${email}`}
                 className="text-gray-500 dark:text-gray-400"
               >
-                ozangunes2894@gmail.com
+                {email}
               </a>
             </p>
             <p>
@@ -64,7 +57,7 @@ const Footer = () => {
                 Phone:{" "}
               </span>
               <span className="text-gray-500 dark:text-gray-400">
-                +880 123 456 789
+                {phone}
               </span>
             </p>
           </div>

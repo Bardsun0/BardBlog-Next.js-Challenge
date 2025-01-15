@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Input from "../common/Input";
+import Button from "../common/Button";
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState("");
@@ -35,35 +37,19 @@ const NewsletterForm = () => {
       aria-labelledby="newsletter"
       onSubmit={handleSubmit}
     >
-      <input
+      <Input
         type="email"
         required
         aria-label="Email address"
         placeholder="Your Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full px-4 py-2 text-sm 
-                 border border-gray-300 dark:border-gray-700 
-                 bg-white dark:bg-gray-800
-                 text-gray-900 dark:text-gray-100
-                 rounded-md 
-                 focus:outline-none focus:ring-2 
-                 focus:ring-gray-300 dark:focus:ring-gray-600 
-                 transition-all disabled:opacity-50"
         disabled={isLoading}
       />
 
-      <button
-        type="submit"
-        disabled={isLoading}
-        className="w-full bg-blue-600 text-white px-4 py-2 rounded-md 
-           hover:bg-blue-700 dark:hover:bg-blue-500
-           transition-all 
-           flex items-center justify-center
-           disabled:opacity-50 disabled:cursor-not-allowed"
-      >
+      <Button type="submit" disabled={isLoading} className="w-full">
         {isLoading ? "Subscribing..." : "Subscribe"}
-      </button>
+      </Button>
 
       {status.message && (
         <p
