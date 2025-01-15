@@ -34,7 +34,7 @@ const Header = () => {
         {/* Search Input and Theme Button */}
         <div className="flex items-center space-x-4">
           {/* Search Input */}
-          <form className="relative" onSubmit={(e) => e.preventDefault()}>
+          <div className="relative">
             <input
               type="text"
               placeholder="Search"
@@ -59,7 +59,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-          </form>
+          </div>
 
           {/* Theme Button */}
           <button className="relative w-12 h-6 bg-gray-200 rounded-full flex items-center transition-all duration-300 hover:bg-gray-300">
