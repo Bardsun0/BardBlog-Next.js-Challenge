@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Header from "./components/Header";
-import MainContent from "./components/MainContent";
-import Footer from "./components/Footer";
+import Header from "./lib/components/Header";
+import MainContent from "./lib/components/MainContent";
+import Footer from "./lib/components/Footer";
 
 export default function Home() {
   return (
