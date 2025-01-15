@@ -5,20 +5,10 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Bard Blog</title>
-        <meta
-          name="description"
-          content="Bard Blog - Next.js ile geliştirildi."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <MainContent />
-        <Footer />
-      </div>
-    </>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
   );
 }
