@@ -12,7 +12,13 @@ const CategoryBadge = ({ children }) => (
 const AuthorInfo = ({ image, author, date }) => (
   <div className="flex items-center space-x-2">
     <div className="w-10 h-10 rounded-full overflow-hidden relative">
-      <Image src={image} alt={author} fill className="object-cover" />
+      <Image
+        src={image}
+        alt={author}
+        fill
+        sizes="(max-width: 40px) 100vw"
+        className="object-cover"
+      />
     </div>
     <span className="font-medium">{author}</span>
     <span className="text-gray-300">•</span>
@@ -29,7 +35,13 @@ const Advertisement = () => (
 const BlogPost = ({ post }) => (
   <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
     <div className="relative h-[240px]">
-      <Image src={post.image} alt={post.title} fill className="object-cover" />
+      <Image
+        src={post.image}
+        alt={post.title}
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
     </div>
     <div className="p-6">
       <span className="text-blue-600 text-sm">{post.category}</span>
@@ -40,6 +52,7 @@ const BlogPost = ({ post }) => (
             src={post.authorImage}
             alt={post.author}
             fill
+            sizes="(max-width: 32px) 100vw"
             className="object-cover"
           />
         </div>
@@ -72,6 +85,7 @@ const MainContent = () => {
             src="/hero.png"
             alt="Hero background"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
