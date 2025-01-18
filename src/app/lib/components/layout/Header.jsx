@@ -49,7 +49,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-white dark:bg-gray-900 font-mono">
+    <header className="bg-white dark:bg-gray-900 font-mono fixed w-full z-10">
       <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4 px-4">
         {/* Logo */}
         <div className="text-2xl font-normal text-black dark:text-white flex items-center gap-2">
