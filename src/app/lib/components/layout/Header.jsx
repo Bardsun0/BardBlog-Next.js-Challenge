@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "../../hooks/ThemeProvider";
+import { useTheme } from "../../hooks/useTheme";
 import { NAV_ITEMS } from "@/app/constants/navigation";
 
 const SearchIcon = () => (
