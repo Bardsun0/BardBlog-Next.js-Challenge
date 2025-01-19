@@ -48,7 +48,7 @@ const NewsletterForm = () => {
       />
 
       <Button type="submit" disabled={isLoading} className="w-full">
-        {isLoading ? "Subscribing..." : "Subscribe"}
+        {isLoading ? "Abone Olunuyor..." : "Abone Ol"}
       </Button>
 
       {status.message && (

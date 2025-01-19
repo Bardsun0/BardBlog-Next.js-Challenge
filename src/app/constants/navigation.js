@@ -1,16 +1,22 @@
-export const NAV_ITEMS = ["Home", "Blog", "Single Post", "Pages", "Contact"];
+export const NAV_ITEMS = [
+  "Anasayfa",
+  "Blog",
+  "Tekil Yazı",
+  "Sayfalar",
+  "İletişim",
+];
 
 export const FOOTER_LINKS = {
-  quickLinks: ["Home", "About", "Blog", "Archived", "Author", "Contact"],
+  quickLinks: ["Anasayfa", "Hakkımızda", "Blog", "Arşiv", "Yazar", "İletişim"],
   categories: [
-    "Lifestyle",
-    "Technology",
-    "Travel",
-    "Business",
-    "Economy",
-    "Sports",
+    "Yaşam Tarzı",
+    "Teknoloji",
+    "Seyahat",
+    "İş Dünyası",
+    "Ekonomi",
+    "Spor",
   ],
-  policies: ["Terms of Use", "Privacy Policy", "Cookie Policy"],
+  policies: ["Kullanım Koşulları", "Gizlilik Politikası", "Çerez Politikası"],
 };
 
 export const CONTACT_INFO = {

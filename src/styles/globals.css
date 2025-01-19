@@ -3,11 +3,80 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  /* Ana renkler - Kızıl, yeşil ve siyah tonları */
+  --primary-red: #8b0000; /* Koyu kızıl */
+  --primary-green: #2f4f4f; /* Koyu yeşil */
+  --accent-red: #cd5c5c; /* Açık kızıl */
+  --accent-green: #3cb371; /* Orta yeşil */
+
+  /* Arkaplan ve metin renkleri */
+  --background: #121212; /* Koyu siyah arkaplan */
+  --foreground: #e8e8e8; /* Açık gri metin */
+  --card-bg: #1e1e1e; /* Kart arkaplanı */
+
+  /* Özel nötr tonlar */
+  --neutral-900: #171717;
+  --neutral-800: #262626;
+  --neutral-700: #404040;
+  --neutral-100: #f5f5f5;
 }
 
 .dark {
-  --background: #1a1a1a;
-  --foreground: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+}
+
+/* Tipografi */
+body {
+  font-family: "Playfair Display", var(--font-geist-sans), serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Blog kartları için özel stil */
+.blog-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--neutral-700);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);
+}
+
+/* Header ve navigasyon */
+.nav-link {
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-red);
+}
+
+/* Özel buton stili */
+.custom-button {
+  background: linear-gradient(45deg, var(--primary-red), var(--primary-green));
+  color: var(--neutral-100);
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Blog başlıkları için özel font */
+.blog-title {
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+}
+
+/* Özel quote stili - şiir ve edebiyat vurgusu için */
+blockquote {
+  border-left: 4px solid var(--primary-red);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
 }

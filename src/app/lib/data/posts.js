@@ -1,68 +1,69 @@
 export const posts = [
   {
     id: 1,
-    title:
-      "The Impact of Technology on the Workplace: How Technology is Changing",
+    title: "Teknolojinin İş Yerine Etkisi: Değişen Dinamikler",
     excerpt:
-      "An exploration of how modern technology is transforming traditional workplace dynamics and productivity.",
+      "Modern teknolojinin geleneksel işyeri dinamiklerini ve üretkenliği nasıl dönüştürdüğüne dair bir inceleme.",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-    category: "Technology",
+    category: "Teknoloji",
     author: "Jason Francisco",
     authorImage: "/avatar-1.png",
     date: "2024-01-18",
     image: "/hero.png",
     featured: true,
-    readTime: "5 min read",
-    tags: ["technology", "workplace", "future of work"],
+    readTime: "5 dk okuma",
+    tags: ["teknoloji", "iş yeri", "geleceğin işi"],
   },
   {
     id: 2,
-    title: "Understanding the Basics of Artificial Intelligence",
-    excerpt: "A beginner's guide to AI and its applications in everyday life.",
+    title: "Yapay Zekanın Temellerini Anlamak",
+    excerpt:
+      "AI'nin günlük hayattaki uygulamaları hakkında bir başlangıç rehberi.",
     content:
-      "Artificial Intelligence has become an integral part of our daily lives...",
-    category: "Technology",
+      "Yapay Zeka, günlük hayatımızın ayrılmaz bir parçası haline geldi...",
+    category: "Teknoloji",
     author: "Sarah Chen",
     authorImage: "/avatar-2.png",
     date: "2024-01-17",
     image: "/blog-1.png",
     featured: false,
-    readTime: "4 min read",
-    tags: ["AI", "technology", "machine learning"],
+    readTime: "4 dk okuma",
+    tags: ["AI", "teknoloji", "makine öğrenimi"],
   },
   {
     id: 3,
-    title: "Understanding the Basics of Artificial Intelligence",
-    excerpt: "A beginner's guide to AI and its applications in everyday life.",
+    title: "Yapay Zekanın Temellerini Anlamak",
+    excerpt:
+      "AI'nin günlük hayattaki uygulamaları hakkında bir başlangıç rehberi.",
     content:
-      "Artificial Intelligence has become an integral part of our daily lives...",
-    category: "Technology",
+      "Yapay Zeka, günlük hayatımızın ayrılmaz bir parçası haline geldi...",
+    category: "Teknoloji",
     author: "Sarah Chen",
-    authorImage: "/avatar-2.png",
+    authorImage: "/avatar-1.png",
     date: "2024-01-17",
     image: "/blog-2.png",
     featured: false,
-    readTime: "4 min read",
-    tags: ["AI", "technology", "machine learning"],
+    readTime: "4 dk okuma",
+    tags: ["AI", "teknoloji", "makine öğrenimi"],
   },
   {
     id: 4,
-    title: "Understanding the Basics of Artificial Intelligence",
-    excerpt: "A beginner's guide to AI and its applications in everyday life.",
+    title: "Yapay Zekanın Temellerini Anlamak",
+    excerpt:
+      "AI'nin günlük hayattaki uygulamaları hakkında bir başlangıç rehberi.",
     content:
-      "Artificial Intelligence has become an integral part of our daily lives...",
-    category: "Technology",
+      "Yapay Zeka, günlük hayatımızın ayrılmaz bir parçası haline geldi...",
+    category: "Teknoloji",
     author: "Sarah Chen",
     authorImage: "/avatar-2.png",
     date: "2024-01-17",
     image: "/blog-3.png",
     featured: false,
-    readTime: "4 min read",
-    tags: ["AI", "technology", "machine learning"],
+    readTime: "4 dk okuma",
+    tags: ["AI", "teknoloji", "makine öğrenimi"],
   },
-
-  // Daha fazla post eklenebilir...
+  // Daha fazla yazı eklenebilir...
 ];
 
 export const getPostById = (id) => {
