@@ -32,7 +32,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-white/90 backdrop-blur-md dark:bg-neutral-900/90 fixed w-full z-10 border-b border-neutral-200/50 dark:border-neutral-800/50">
+    <header className="bg-white/90 backdrop-blur-sm dark:bg-neutral-900/90 fixed w-full z-10 border-b border-neutral-200/50 dark:border-neutral-800/50">
       <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-serif text-neutral-100 dark:text-neutral-100 flex items-center gap-3">
@@ -62,10 +62,10 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search posts..."
-              className="bg-neutral-800/50 text-neutral-300
+              className="bg-neutral-300/50 text-neutral-300
                        border border-neutral-700 rounded-lg px-4 py-2 text-sm w-[200px]
                        focus:outline-none focus:ring-2 focus:ring-[#CD5C5C]/30
-                       placeholder-neutral-500"
+                       placeholder-neutral-500 dark:placeholder-neutral-100"
             />
             <button
               type="submit"
