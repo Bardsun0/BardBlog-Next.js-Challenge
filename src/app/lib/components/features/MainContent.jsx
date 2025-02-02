@@ -33,7 +33,7 @@ const MainContent = () => {
   );
 
   return (
-    <main className="flex-grow bg-neutral-900 dark:bg-neutral-900 pt-20">
+    <main className="flex-grow bg-gradient-to-b from-background to-card-bg dark:from-neutral-900 dark:to-neutral-900 pt-20">
       {/* Hero Section */}
       <section className="relative max-w-screen-xl mx-auto w-full h-[700px] mb-20">
         <div className="relative w-full h-full overflow-hidden rounded-2xl">
@@ -66,7 +66,7 @@ const MainContent = () => {
 
       {/* Posts Grid Section */}
       <section className="max-w-screen-xl mx-auto px-6 mb-20">
-        <h2 className="text-3xl font-serif font-bold mb-12 text-neutral-100">
+        <h2 className="text-3xl font-serif font-bold mb-12 text-neutral-900 dark:text-neutral-100">
           Son Yazılar
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -32,7 +32,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-neutral-900/80 backdrop-blur-md dark:bg-neutral-900/90 fixed w-full z-10 border-b border-neutral-800">
+    <header className="bg-white/90 backdrop-blur-md dark:bg-neutral-900/90 fixed w-full z-10 border-b border-neutral-200/50 dark:border-neutral-800/50">
       <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-serif text-neutral-100 dark:text-neutral-100 flex items-center gap-3">

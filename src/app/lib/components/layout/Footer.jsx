@@ -45,7 +45,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-neutral-900 dark:bg-neutral-900 font-serif mt-auto border-t border-neutral-800">
+    <footer className="bg-card-bg dark:bg-neutral-900 font-serif mt-auto border-t border-neutral-200/50 dark:border-neutral-800/50">
       <div className="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* About Section */}
         <FooterSection title="Hakkımda">

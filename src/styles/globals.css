@@ -4,26 +4,27 @@
 
 :root {
   /* Ana renkler - Kızıl, yeşil ve siyah tonları */
-  --primary-red: #8b0000; /* Koyu kızıl */
-  --primary-green: #2f4f4f; /* Koyu yeşil */
-  --accent-red: #cd5c5c; /* Açık kızıl */
-  --accent-green: #3cb371; /* Orta yeşil */
+  --primary-red: #cd5c5c; /* Koyu kızıl */
+  --primary-green: #3cb371; /* Koyu yeşil */
+  --accent-red: #e6857d; /* Açık kızıl */
+  --accent-green: #4dc488; /* Orta yeşil */
 
   /* Arkaplan ve metin renkleri */
-  --background: #121212; /* Koyu siyah arkaplan */
-  --foreground: #e8e8e8; /* Açık gri metin */
-  --card-bg: #1e1e1e; /* Kart arkaplanı */
+  --background: #f7f7f7; /* Koyu siyah arkaplan */
+  --foreground: #2d2d2d; /* Açık gri metin */
+  --card-bg: #ffffff; /* Kart arkaplanı */
 
   /* Özel nötr tonlar */
-  --neutral-900: #171717;
-  --neutral-800: #262626;
-  --neutral-700: #404040;
-  --neutral-100: #f5f5f5;
+  --neutral-900: #2d2d2d;
+  --neutral-800: #404040;
+  --neutral-700: #525252;
+  --neutral-100: #ffffff;
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #121212;
   --foreground: #f5f5f5;
+  --card-bg: #1e1e1e;
 }
 
 /* Tipografi */
@@ -36,13 +37,14 @@ body {
 /* Blog kartları için özel stil */
 .blog-card {
   background-color: var(--card-bg);
-  border: 1px solid var(--neutral-700);
-  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Header ve navigasyon */
@@ -75,8 +77,10 @@ body {
 
 /* Özel quote stili - şiir ve edebiyat vurgusu için */
 blockquote {
-  border-left: 4px solid var(--primary-red);
-  padding-left: 1rem;
-  font-style: italic;
-  margin: 1.5rem 0;
+  background: linear-gradient(90deg, var(--primary-red) 0%, transparent 2%);
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
