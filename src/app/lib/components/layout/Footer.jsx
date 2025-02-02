@@ -16,7 +16,7 @@ const FooterLink = ({ href = "/", children }) => (
 
 const FooterSection = ({ title, children }) => (
   <div className="space-y-4">
-    <h3 className="font-serif text-xl text-neutral-100 mb-6">{title}</h3>
+    <h3 className="font-serif text-xl text-neutral-900 dark:text-neutral-100 mb-6">{title}</h3>
     {children}
   </div>
 );
@@ -52,7 +52,7 @@ const Footer = () => {
           <Quote />
           <div className="space-y-3 text-sm mt-8">
             <p>
-              <span className="text-neutral-100">Email: </span>
+              <span className="text-neutral-900 dark:text-neutral-100">Email: </span>
               <a
                 href={`mailto:${email}`}
                 className="text-neutral-400 hover:text-[#CD5C5C] transition-colors"
@@ -61,7 +61,7 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              <span className="text-neutral-100">Telefon: </span>
+              <span className="text-neutral-900 dark:text-neutral-100">Telefon: </span>
               <span className="text-neutral-400">{phone}</span>
             </p>
           </div>
