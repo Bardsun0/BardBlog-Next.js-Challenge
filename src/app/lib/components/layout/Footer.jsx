@@ -98,7 +98,7 @@ const Footer = () => {
       <div className="border-t border-neutral-800">
         <div className="max-w-screen-xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="text-2xl font-normal text-neutral-100 flex items-center gap-2">
+            <div className="text-2xl font-normal text-neutral-900 dark:text-neutral-100 flex items-center gap-3">
               <Image
                 src="/logo.png"
                 width={32}

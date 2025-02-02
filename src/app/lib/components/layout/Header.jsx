@@ -35,7 +35,7 @@ const Header = () => {
     <header className="bg-white/90 backdrop-blur-sm dark:bg-neutral-900/90 fixed w-full z-10 border-b border-neutral-200/50 dark:border-neutral-800/50">
       <div className="mx-auto max-w-screen-xl flex items-center justify-between py-4 px-6">
         {/* Logo */}
-        <div className="text-2xl font-serif text-neutral-100 dark:text-neutral-100 flex items-center gap-3">
+        <div className="text-2xl font-serif text-neutral-900 dark:text-neutral-100 flex items-center gap-3">
           <Image
             src="/logo.png"
             width={40}
