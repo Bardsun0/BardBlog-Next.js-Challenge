@@ -22,9 +22,9 @@ const MainContent = () => {
   const QuoteSection = () => (
     <div className="max-w-2xl mx-auto text-center my-20 px-4">
       <blockquote className="text-2xl font-serif italic text-neutral-300">
-        "Yaşamak görevdir bu yangın yerinde,
+        `Yaşamak görevdir bu yangın yerinde,
         <br />
-        Yaşamak, insan kalarak..."
+        Yaşamak, insan kalarak...`
         <footer className="text-lg mt-4 text-neutral-400">
           — Nazım Hikmet
         </footer>
@@ -46,19 +46,6 @@ const MainContent = () => {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-transparent" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="max-w-screen-xl mx-auto px-6 text-center">
-              <CategoryBadge>{featuredPost.category}</CategoryBadge>
-              <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 mt-4 max-w-4xl mx-auto text-neutral-100">
-                {featuredPost.title}
-              </h1>
-              <AuthorInfo
-                image={featuredPost.authorImage}
-                author={featuredPost.author}
-                date={featuredPost.date}
-              />
-            </div>
-          </div>
         </div>
       </section>
 

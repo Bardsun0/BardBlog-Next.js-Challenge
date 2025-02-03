@@ -82,7 +82,7 @@ const Footer = () => {
         {/* Newsletter */}
         <div className="bg-neutral-300/50 p-8 rounded-xl backdrop-blur-sm lg:w-96">
           <h3
-            className="font-serif text-xl mb-4 text-neutral-100"
+            className="font-serif text-xl mb-4 text-neutral-400"
             id="newsletter"
           >
             Beyaz Tavşan'ı Takip Et
